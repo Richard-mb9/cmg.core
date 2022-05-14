@@ -1,0 +1,25 @@
+{
+  "name": "cmg.core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.py",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "pytest --cov=./src --cov-report=html",
+    "redoc": "redoc-cli bundle swagger.yaml",
+    "build-postgres":"cd tests/db && docker-compose up -d",
+    "create-tables": "python3 create_tables.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "redoc-cli": "^0.13.10"
+  },
+  "dependencies": {
+    "serverless-python-requirements": "^5.4.0",
+    "serverless-wsgi": "^3.0.0"
+  }
+}
